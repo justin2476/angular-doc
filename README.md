@@ -68,3 +68,17 @@ Services
 ---------
 
 Services are defined to call backend api,  one service file is good enough for all the APIs.
+generate the service by, ng generate service nameOfservice;
+
+export class ApiService {
+  url = 'https://jsonplaceholder.typicode.com/todos/1';
+  constructor(private http: HttpClient) { }
+
+//getWork is function
+public getWork()  {
+  return this.http.get(this.url);
+  }
+}
+
+We can now use getWork function in any component by importing ApiService and declaring it in the constructer 
+
